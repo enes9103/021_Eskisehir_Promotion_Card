@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  flex: 0.5;
+  position: relative;
+  border-radius: 50px;
+  margin: 10px;
+  transition: flex 0.7s ease-in;
+}
+
+.panel a{
+  position: absolute;
+  font-size: 2rem;
+  color: #fff;
+  bottom: 40px;
+  left: 30px;
+  opacity: 1;
+  transition:opacity 1s ease-in 0.6s;
+  text-decoration: none;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active a {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 800px) {
+  .panel:nth-child(4),
+  .panel:nth-child(5) {
+    display: none;
+    width: 100vw;
+  }
+}
